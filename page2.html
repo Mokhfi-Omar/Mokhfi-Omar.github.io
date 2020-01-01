@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>site</title>
+</head>
+
+<body>
+
+    <div id="top">
+
+        <div id="header">
+            <div id="logo">
+                <p>URLClassifier</p>
+            </div>
+            <div id="menu">
+                <ul>
+                    <li>
+                        <a href="">HOME</a>
+                    </li>
+                    <li>
+                        <a href="">ABOUT</a>
+                    </li>
+                    <li>
+                        <a href="">TEAM</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="content">
+            <div>
+                <h1 class="text-warning">WEB PAGES CLASSIFICATION</h1>
+                <p>Put the <b>URL</b> of the web page and we will<span> classify it</span></p>
+                <form method="post" id="form">
+                    <input type="text" id="url" name="url" required="" placeholder="URL ..."><br>
+                    <button type="submit">SUBMIT</button>
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script>
+        var ngURL = "http://" + localStorage.getItem("ng") + ".ngrok.io";
+        document.getElementById("form").setAttribute("action", ngURL);
+    </script>
+
+</body>
+
+</html>
